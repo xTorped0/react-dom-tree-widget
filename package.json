@@ -1,0 +1,25 @@
+{
+  "name": "react-dom-tree-widget",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "serve": "vite preview"
+  },
+  "author": "Torped0",
+  "license": "ISC",
+  "devDependencies": {
+    "@types/react": "^18.2.51",
+    "@types/react-dom": "^18.2.18",
+    "sass": "^1.70.0",
+    "typescript": "^5.3.3",
+    "vite": "^5.0.12"
+  },
+  "dependencies": {
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0"
+  }
+}
