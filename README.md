@@ -2,7 +2,7 @@
 
 Welcome to the Dom Tree Widget. This is a simple widget that allows you to view the structure of the DOM tree of the page. You can also view the styles of the elements and the event handlers attached to them. This widget is available for use on any rendered page.
 
-Too see an example page you can open this link [GitHub Page](https://github.com/xTorped0/react-dom-tree-widget)
+Too see an example page you can open this link [GitHub Page](https://xtorped0.github.io/react-dom-tree-widget/)
 
 ## Quick Start
 
