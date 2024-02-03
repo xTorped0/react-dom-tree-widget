@@ -4,8 +4,10 @@ export type Position = {
 }
 
 export interface State {
-	target: string;
+	target: HTMLElement;
 	position?: Position;
+	isHidden?: boolean;
+	isExpanded?: boolean;
 }
 
 export type ShownNode = {

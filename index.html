@@ -5,8 +5,112 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title> Example page </title>
 	<link rel="stylesheet" href="/src/styles/index.scss">
+	<link rel="stylesheet" href="/src/styles/example.scss">
 </head>
 <body>
+	<header>
+		<div class="logo"> Main logo</div>
+		<nav class="navigation">
+			<ul class="navigation__list">
+				<li>
+					<a href="#descripton" class="link"> descripton </a>
+				</li>
+				<li>
+					<a href="#quick-start" class="link"> quick start </a>
+				</li>
+				<li>
+					<a href="#available-settings" class="link"> available settings </a>
+				</li>
+			</ul>
+		</nav>
+	</header>
+
+	<main>
+		<div class="description" id="descripton">
+			<h2> Dom Tree Widget </h2>
+			<span>
+				Welcome to the Dom Tree Widget. This is a simple widget that allows you to view the structure of the DOM tree of the page. 
+				You can also view the styles of the elements and the event handlers attached to them. 
+				To get started, click on the 
+				<a href="#quick-start" class="link"> 
+					Quick Start
+				</a> 
+				&nbsp; link in the navigation menu. This widget is available for use on any rendered page. 
+			</span>
+		</div>
+		<div class="quick-start" id="quick-start">
+			<h3> Quick Start </h3>
+			<span>
+				To get started, you need to download the widget from the github repository. Link to repo is presented below.
+				<a href="https://github.com/xTorped0/react-dom-tree-widget" class="link" target="_blank"> GitHub Page </a>
+				After downloading the widget, you need to install dependensies using the command <code> npm i </code> 
+				after that to make sure that everything was installed correctly you can run the command <code> npm run dev </code> 
+				and open the page in the browser. By default, the page will be available at the address
+				<a href="http://localhost:8080" class="link" target="_blank"> 
+					http://localhost:8080 
+				</a>
+				<br />
+
+				If you`re using 
+				<strong>
+					Native Javascript
+				</strong> 
+				you need to make a bundle before using the widget. To do this, you need to run the command 
+				<code> npm run build </code> 
+				and after that you can import the widget in your project from the <code> index.js </code> file. 
+				To import the widget, you need to use the following code:
+				<code>
+					import './path/to/bundled/index.js';
+				</code>
+				or the same for inserting the widget into the html file:
+				<code>
+					&lt;script src="./path/to/bundled/index.js"&gt;&lt;/script&gt;
+				</code>
+				<br />
+
+				If you`re using 
+				<strong>
+					React
+				</strong> 
+				you can import the widget component using the following code:
+				<code>
+					import { Widget } from './src/app/index.tsx';
+				</code>
+		</div>
+		<div class="available-settings" id="available-settings">
+			<h3> available settings </h3>
+			<span>
+				The widget could be dragged and dropped to any place on the page. To do it you need to click on the icon 
+				<img src="/svgs/drag.svg" alt="drag"/>
+				and move it to the desired place. To hide the widget, you have to click on the icon 
+				<img src="/svgs/hide.svg" alt="hide"/>
+				<br />
+				- To update the tree, you need to click on the icon 
+				<img src="/svgs/reload.svg" alt="update"/>
+				<br />
+				 - You also have the opportunity to change the tree display option (hidden/expanded) by adding the corresponding flag at the top of the widget.
+				<!-- <br />
+				 - To display only a specific part of the tree, you can select the node that interests you in the list of nodes -->
+				<br />
+				 - To highlight the selected node, you can click on the node name in the list of nodes
+				 <br />
+			</span>
+		</div>
+	</main>
+
+	<footer>
+		<div class="made-with">
+			Made with 
+			<span>
+				❤
+			</span> 
+			by
+		</div>
+		<span class="author">
+			Torped0
+		</span> 
+	</footer>
+
 	<script src="/src/index.tsx" type="module"></script>
 </body>
 </html>
