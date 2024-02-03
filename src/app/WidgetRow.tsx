@@ -3,14 +3,14 @@ import { useState } from "react";
 import type { ShownNode } from "./types";
 
 interface WidgetRowProps {
-	node: ShownNode;
+	element: ShownNode;
 	level?: number;
 	isExpanded?: boolean;
 }
 
 export function WidgetRow(props: WidgetRowProps) {
-	const { node, level = 0, isExpanded = false } = props;
-	const { id, tagName, className, children } = node;
+	const { element, level = 0, isExpanded = false } = props;
+	const { id, tagName, className, children, node } = element;
 
 	const [isOpen, setIsOpen] = useState(false);
 
@@ -19,6 +19,21 @@ export function WidgetRow(props: WidgetRowProps) {
 
 	function handleToggle() {
 		setIsOpen(!isOpen);
+	}
+	
+	function onHighlight() {
+		node.animate([
+			// keyframes
+			{ transform: 'scale(1)', background: 'white', color: 'black' },
+			{ transform: 'scale(1.2)', background: 'yellow', color: 'black' },
+			{ transform: 'scale(1)', background: 'white', color: 'black' }
+		], {
+			// timing options
+			duration: 1000,
+			iterations: 1
+		});
+
+		node.scrollIntoView({ behavior: 'smooth' });
 	}
 
 	return (
@@ -35,19 +50,17 @@ export function WidgetRow(props: WidgetRowProps) {
 					</svg>
 					</div>
 				)}
-				<div className="node__tag">
-					Tag name: 
-					{ ' ' }
-					{tagName}
-				</div>
+				<div className="node__tag" onClick={onHighlight}>
+				<span> Tag name: {tagName} </span>
 				{ className && <span className="node__class">.{className}</span> }
 				{ id && <span className="node__class">#{id}</span> }
+				</div>
 			</div>
 			<div className="node__children" data-open={isExpanded || isOpen}>
 				{children.map((child, ind) => (
 					<WidgetRow 
 						key={child.tagName + ind} 
-						node={child} 
+						element={child} 
 						level={level + 1} 
 						isExpanded={isExpanded} 
 					/>

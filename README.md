@@ -8,7 +8,7 @@ Too see an example page you can open this link [GitHub Page](https://github.com/
 
 To get started, you need to download the widget from the [GitHub Page](https://github.com/xTorped0/react-dom-tree-widget). After downloading the widget, you need to install dependencies using the command `npm i`. After that, to make sure that everything was installed correctly, you can run the command `npm run dev` and open the page in the browser. By default, the page will be available at the address [http://localhost:8080](http://localhost:8080).
 
-If you're using **Native Javascript**, you need to make a bundle before using the widget. To do this, you need to run the command `npm run build` and after that you can import the widget in your project from the `index.js` file. To import the widget, you need to use the following code:
+If you're using **Vanilla JS**, you need to make a bundle before using the widget. To do this, you need to run the command `npm run build` and after that you can import the widget in your project from the `index.js` file. To import the widget, you need to use the following code:
 
 ```javascript
 import './path/to/bundled/index.js';

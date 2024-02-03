@@ -89,7 +89,7 @@ export function Widget() {
 					</div>
 				
 					<div className="widget__rows">
-						<WidgetRow node={node} isExpanded={isExpanded} /> 
+						<WidgetRow element={node} isExpanded={isExpanded} /> 
 					</div>
 				</>
 			)}
